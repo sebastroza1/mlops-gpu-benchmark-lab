@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mlops-gpu-benchmark-lab"
+version = "0.1.0"
+description = "Reproducible PyTorch training and CPU/GPU-ready benchmarking on UCI Covertype"
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+  "matplotlib>=3.9,<4",
+  "numpy>=2.0,<3",
+  "pandas>=2.2,<4",
+  "psutil>=6,<8",
+  "scikit-learn>=1.5,<2",
+  "torch==2.9.1",
+  "ucimlrepo==0.0.7",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.3,<9",
+  "ruff>=0.9,<1",
+]
+
+[project.scripts]
+ml-benchmark = "mlops_gpu_benchmark_lab.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+addopts = "-q"
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM"]

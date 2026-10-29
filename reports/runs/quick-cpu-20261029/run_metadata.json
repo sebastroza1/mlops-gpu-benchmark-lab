@@ -1,0 +1,46 @@
+{
+  "configuration": {
+    "batch_size": 256,
+    "benchmark_repeats": 7,
+    "benchmark_warmup": 3,
+    "epochs": 8,
+    "learning_rate": 0.001,
+    "mode": "quick",
+    "patience": 3,
+    "sample_size": 20000,
+    "seed": 42,
+    "weight_decay": 0.0001
+  },
+  "dataset": {
+    "doi": "10.24432/C50K5N",
+    "features": 54,
+    "name": "Covertype",
+    "observations_used": 20000,
+    "source": "uci-ml-repository",
+    "test_observations": 4000,
+    "training_observations": 12000,
+    "uci_id": 31,
+    "validation_observations": 4000
+  },
+  "environment": {
+    "available_ram_bytes_at_start": 13303812096,
+    "cuda_available": false,
+    "cuda_device_count": 0,
+    "gpu": null,
+    "logical_cpu_count": 8,
+    "numpy": "2.5.4",
+    "pandas": "3.1.0",
+    "physical_cpu_count": 4,
+    "platform": "Windows-11-10.0.22631-SP0",
+    "processor": "AMD64 Family 23 Model 24 Stepping 1, AuthenticAMD",
+    "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+    "scikit_learn": "1.9.1",
+    "torch": "2.9.1+cpu",
+    "total_ram_bytes": 32147910656
+  },
+  "git_revision": null,
+  "mode": "quick",
+  "selected_device": "cpu",
+  "started_at_utc": "2026-10-29T03:24:49.089761+00:00",
+  "status": "completed"
+}
